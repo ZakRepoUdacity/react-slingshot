@@ -45,8 +45,8 @@ jobs:
       - restore_cache:
           keys: 
             - "npm-packages"
-          paths:
-            - /src/node_modules
+          # paths:
+          #   - /src/node_modules
       - run: npm i
       - run:
           name: Tests
@@ -62,8 +62,8 @@ jobs:
       - restore_cache:
           keys: 
             - "npm-packages"
-          paths:
-            - /src/node_modules
+          # paths:
+          #   - /src/node_modules
       - run:
           name: Analyze
           command: npm audit
